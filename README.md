@@ -29,7 +29,7 @@ Demais módulos já vem instalados com o Python 3.10 ou acima
 
 Possivelmente é necessário deixar a pasta e todos os arquivos no grupo de Sistema para poder mexer com arquivos
 
-Execute o código manager_de_cs
+Execute o arquivo manager_de_cs.py
 
 # Feedback/Reports
 
