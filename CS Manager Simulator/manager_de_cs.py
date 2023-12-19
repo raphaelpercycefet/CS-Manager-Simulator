@@ -587,11 +587,12 @@ def Abrir_Pagina_Taticas_Pontos_Fortes_Simulação(team1, team2, usuario, Pagina
     btn_economia_arriscada.place(relx=0.20, rely=0.67, anchor= CENTER)
     btn_economia_normal.place(relx=0.50, rely=0.67, anchor= CENTER)
     btn_economia_conservadora.place(relx=0.80, rely=0.67, anchor= CENTER)
-    
-    btn_confirmar_font = ("Dotum", 24)
-    btn_confirmar = tk.Button(PTPFSM2, text= "Simular Mapa", width=11, height=4, font= btn_confirmar_font, command=lambda: SimularPartida(PTPFSM2, team1, team2, usuario, mapa, mapas_results, economia_time1, tatica_time1 if "tatica_time1" in globals() else None, pontoforte_time1_tr if "pontoforte_time1_tr" in globals() else None, pontoforte_time1_ct if "pontoforte_time1_ct" in globals() else None, team1_wins, team2_wins, mapas_do_jogo))
-    btn_confirmar.place(relx=0.5, rely=0.83, anchor= CENTER)
-    
+    try:
+        btn_confirmar_font = ("Dotum", 24)
+        btn_confirmar = tk.Button(PTPFSM2, text= "Simular Mapa", width=11, height=4, font= btn_confirmar_font, command=lambda: SimularPartida(PTPFSM2, team1, team2, usuario, mapa, mapas_results, economia_time1, tatica_time1 if "tatica_time1" in globals() else None, pontoforte_time1_tr if "pontoforte_time1_tr" in globals() else None, pontoforte_time1_ct if "pontoforte_time1_ct" in globals() else None, team1_wins, team2_wins, mapas_do_jogo))
+        btn_confirmar.place(relx=0.5, rely=0.83, anchor= CENTER)
+    except Exception as e:
+        messagebox.showerror(title="Erro", message=e)
     
     lbl_obs_font = ("Dotum", 15)
     lbl_obs = tk.Label(PTPFSM2, text= "(Escolha uma Tática e um Ponto Forte antes):", bg= "azure1", height=1, font= lbl_obs_font)
@@ -1052,7 +1053,7 @@ def Abrir_Pagina_Resultado_Mapa(team1_copy, team2_copy, usuario, mapa, mapas_do_
     lbl_mais_deaths = tk.Label(Pagina_Resultado_Mapa, text= f"Mais Mortes: {most_deaths_player.name} ({most_deaths_player.deaths})", bg= "#FCE6C9", width= 25, height= 2, bd=3, relief="solid", font= lbl_time1_jogador_font)
     lbl_mais_deaths.place(relx=0.5, rely=0.72, anchor= CENTER)
     
-    lbl_vs_font = ("Dotum", 28)
+    lbl_vs_font = ("Dotum", 40)
     lbl_vs = tk.Label(Pagina_Resultado_Mapa, text= "X", bg= "darkgoldenrod", width= 5, height= 2, font= lbl_vs_font)
     lbl_vs.place(relx=0.5, rely=0.30, anchor= CENTER)
     
@@ -1258,7 +1259,7 @@ def Abrir_Pagina_Final(team1_copy, team2_copy, usuario, mapas_results, final_win
                 label = tk.Label(frm, text= f"Usuario: {dado['Nome']}, Time: {dado['Time']}, Jogos: {dado['Jogos']}, Vitórias: {dado['Vitorias']}, Derrotas: {dado['Derrotas']}", bg="azure1", bd= 1, font= lbl_usuario_tabela_font)
                 label.grid(row=i, column=0, sticky="n", padx=5, pady=5)
             
-            frm.place(relx=0.76, rely=0.60, anchor= CENTER)
+            frm.place(relx=0.76, rely=0.66, anchor= CENTER)
             
             
             lbl_time1_scoreboard_font = ("Dotum", 28)
@@ -1267,9 +1268,9 @@ def Abrir_Pagina_Final(team1_copy, team2_copy, usuario, mapas_results, final_win
             
             btn_font = ("Dotum", 23)
             btn_sair = tk.Button(Pagina_Final, text= "Fechar Aplicação", width=25, height=2, font= btn_font, command= lambda: (Pagina_Final.destroy(), sys.exit()))
-            btn_sair.place(relx=0.3, rely=0.85, anchor= CENTER)
+            btn_sair.place(relx=0.3, rely=0.90, anchor= CENTER)
             btn_recomecar = tk.Button(Pagina_Final, text= "Recomeçar Aplicação", width=25, height=2, font= btn_font, command= lambda: Recomecar())
-            btn_recomecar.place(relx=0.7, rely=0.85, anchor= CENTER)
+            btn_recomecar.place(relx=0.7, rely=0.90, anchor= CENTER)
             
             winning_players_stats = {}
 
