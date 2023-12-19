@@ -29,6 +29,8 @@ Demais módulos já vem instalados com o Python 3.10 ou acima
 
 Possivelmente é necessário deixar a pasta e todos os arquivos no grupo de Sistema para poder mexer com arquivos
 
+Execute o código manager_de_cs
+
 # Feedback/Reports
 
 Reporte qualquer problema que estiver tendo com esse programa em https://github.com/raphaelpercycefet/CS-Manager-Simulator/issues.
