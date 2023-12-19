@@ -1053,7 +1053,7 @@ def Abrir_Pagina_Resultado_Mapa(team1_copy, team2_copy, usuario, mapa, mapas_do_
     lbl_mais_deaths = tk.Label(Pagina_Resultado_Mapa, text= f"Mais Mortes: {most_deaths_player.name} ({most_deaths_player.deaths})", bg= "#FCE6C9", width= 25, height= 2, bd=3, relief="solid", font= lbl_time1_jogador_font)
     lbl_mais_deaths.place(relx=0.5, rely=0.72, anchor= CENTER)
     
-    lbl_vs_font = ("Dotum", 36)
+    lbl_vs_font = ("Dotum", 32)
     lbl_vs = tk.Label(Pagina_Resultado_Mapa, text= "X", bg= "darkgoldenrod", width= 5, height= 2, font= lbl_vs_font)
     lbl_vs.place(relx=0.5, rely=0.30, anchor= CENTER)
     
