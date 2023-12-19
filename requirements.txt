@@ -1,0 +1,6 @@
+Python==3.10 
+Rich==13.7
+matplotlib==3.8.2 
+numpy==1.26.2
+mysql.connector==2.2.9 
+pytest==7.4.3
