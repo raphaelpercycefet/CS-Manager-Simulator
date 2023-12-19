@@ -11,20 +11,21 @@ Os elencos dos times são baseados em sua maioria no tempo logo antes do lançam
 
 É necessário ter:
 
-Python 3.10 >=
+Python 3.10 ou acima 
 
-Rich 13.7 >=
+Rich 13.7 ou acima
 
-matplotlib 3.8.2 >=
+matplotlib 3.8.2 ou acima
 
-numpy 1.26.2 >=
+numpy 1.26.2 ou acima
 
-mysql.connector 2.2.9 >=
+mysql.connector 2.2.9 ou acima
 
 
-Demais módulos já vem instalados com o Python 3.10 >=
+Demais módulos já vem instalados com o Python 3.10 ou acima
 
-É necessário baixar o aplicativo MySQL Workbench e criar uma conxeão localhost com nome de usuário = "root" e executar o script cspython4.sql dentro dessa conexão no workbench.
+É necessário baixar o aplicativo MySQL Workbench 8.0 e criar uma conxeão localhost com nome de usuário = "root" e executar o script cspython4.sql dentro dessa conexão no workbench.
+É aconselhável usar o aplicativo Xampp para estabelecer a conexão local, um vídeo explicando como: https://www.youtube.com/watch?v=f_EGF3027qs
 
 Possivelmente é necessário deixar a pasta e todos os arquivos no grupo de Sistema para poder mexer com arquivos
 
